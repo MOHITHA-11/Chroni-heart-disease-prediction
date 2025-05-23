@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Disease Predictor</h2>
+        <form method="post">
+            <!-- age -->
+            <div class="form-group">
+                <label class="form-label">age:</label>
+                <input type="number" name="age">
+            </div>
+
+            <!-- Sex -->
+            <div class="form-group">
+                <label class="form-label">sex:</label>
+                <label><input type="radio" name="sex" value="1"> Male</label>
+                <label><input type="radio" name="sex" value="0"> Female</label>
+            </div>
+
+            <!-- cp -->
+            <div class="form-group">
+                <label class="form-label">cp:</label>
+                <select name="cp">
+                    <option></option>
+                    <option value="0">0=Typical Angina</option>
+                    <option value="1">1=Atypical Angina</option>
+                    <option value="2">2=Non-anginal Pain</option>
+                    <option value="3">3=Asymptomatic</option>
+                </select>
+            </div>
+
+            <!-- testbps -->
+            <div class="form-group">
+                <label class="form-label">testbps:</label>
+                <input type="number" name="testbps">
+            </div>
+
+            <!-- chol -->
+            <div class="form-group">
+             <label class="form-label">chol:</label>
+             <input type="number" name="chol">
+            </div>
+             
+            <!-- fbs -->
+            <div class="form-group">
+                <label class="form-label">fbs:</label>
+                <label><input type="radio" name="fbs" value="1"> True</label>
+                <label><input type="radio" name="fbs" value="0"> False</label>
+            </div>
+
+            <!-- restecg -->
+            <div class="form-group">
+                <label class="form-label">restecg:</label>
+                <select name="restecg">
+                    <option></option>
+                    <option value="0">0=Normal</option>
+                    <option value="1">1=ST-T Abnormality</option>
+                    <option value="2">2=Left Ventricular Hypertrophy</option>
+                </select>
+            </div>
+
+            <!-- thalach -->
+            <div class="form-group">
+                <label class="form-label">thalach:</label>
+                <input type="number" name="thalach">
+            </div>
+            
+
+            <!-- exang -->
+            <div class="form-group">
+                <label class="form-label">exang:</label>
+                <label><input type="radio" name="exang" value="1"> Yes</label>
+                <label><input type="radio" name="exang" value="0"> No</label>
+            </div>
+
+            <!-- oldpeak -->
+            <div class="form-group">
+                <label class="form-label">oldpeak:</label>
+                <input type="number" name="oldpeak" step="0.1">
+            </div>
+
+            <!-- slope -->
+            <div class="form-group">
+                <label class="form-label">slope:</label>
+                <select name="slope">
+                    <option></option>
+                    <option value="0">0=Upsloping</option>
+                    <option value="1">1=Flat</option>
+                    <option value="2">2=Downsloping</option>
+                </select>
+            </div>
+
+            <!-- ca -->
+            <div class="form-group">
+                <label class="form-label">ca:</label>
+                <select name="ca">
+                    <option></option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <!-- thal -->
+            <div class="form-group">
+                <label class="form-label">thal:</label>
+                <select name="thal">
+                    <option></option>
+                    <option value="1">1=Normal</option>
+                    <option value="2">2=Fixed Defect</option>
+                    <option value="3">3=Reversible Defect</option>
+                </select>
+            </div>
+
+            <button type="submit" class="predict-btn">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result {{ 'positive' if prediction == 1 else 'negative' }}">
+                {{ 'Heart Disease predicted' if prediction == 1 else 'No Heart Disease' }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

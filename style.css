@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #324d8c, #324d8c);
+    padding: 40px;
+    color: #333;
+}
+body {
+    background-image: url('/static/heartproj_resized_1920x1080.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.container {
+    
+        width: 600px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.1); /* Transparent white */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        padding: 25px 35px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+
+
+
+h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom:20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    width: 120px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+input[type="number"], select {
+    flex: 1;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"] {
+    margin: 0 6px 0 12px;
+}
+
+
+
+.predict-btn {
+    display: block;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.predict-btn:hover {
+    background-color: #34495e;
+}
+
+
+
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.result.positive {
+    background-color: #ffcccc;
+    color: #e74c3c;
+}
+
+.result.negative {
+    background-color: #d4edda;
+    color: #27ae60;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* takes full screen height */
+}
+
+/* Adjust box styling */
+.alert-box {
+    background-color: #f59e0b; /* amber warning */
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 300px; /* smaller, more square box */
+}
+
+/* Text spacing */
+.alert-box h2 {
+    margin-bottom: 20px;
+}
+
+/* Button style */
+.back-button {
+    background-color: #1f2937; /* dark slate */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.back-button:hover {
+    background-color: #374151;
+}
+
+

@@ -10,3 +10,9 @@ Evaluated model performance using accuracy, confusion matrix, and ROC curve.
 Designed and deployed a web interface using Flask, HTML, and CSS.
 
 Achieved real-time predictions with XGBoost model, providing clear health risk feedback to users.
+
+create index.html and result.html upload in templates.
+
+css file in static
+
+
